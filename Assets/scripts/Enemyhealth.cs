@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerhealth : MonoBehaviour
+public class Enemyhealth : MonoBehaviour
 {
-    public int maxHealth = 100;
+    public int maxHealth = 50;
     public int currentHealth;
 
     private void Start()
@@ -12,7 +12,7 @@ public class playerhealth : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    public void TakeDamage(int damageAmount)
+    public void playeratack(int damageAmount)
     {
         currentHealth -= damageAmount;
 
@@ -25,11 +25,6 @@ public class playerhealth : MonoBehaviour
     void Die()
     {
         // Логика для смерти игрока
-        Debug.Log("Player died");
-    }
-
-    public void Heal(int healAmount)
-    {
-        currentHealth = Mathf.Min(maxHealth, currentHealth + healAmount);
+        Debug.Log("enemy died");
     }
 }

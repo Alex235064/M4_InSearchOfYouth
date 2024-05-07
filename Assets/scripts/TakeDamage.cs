@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class TakeDamage : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int damageAmount = 10;
+    public string playerTag = "Player";
+    private void OnCollisionEnter(Collision collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (collision.gameObject.CompareTag(playerTag))
+        {
+            playerhealth playerHealth = collision.gameObject.GetComponent<playerhealth>();
+            if (playerHealth != null)
+            {
+                Debug.Log("take");
+                playerHealth.TakeDamage(damageAmount);
+            }
+        }
     }
 }
