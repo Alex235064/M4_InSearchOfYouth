@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class Enemyhealth : MonoBehaviour
 {
-    public int maxHealth = 50;
-    public int currentHealth;
+    public float maxHealth = 50;
+    public float currentHealth;
 
     private void Start()
     {
         currentHealth = maxHealth;
     }
 
-    public void playeratack(int damageAmount)
+    public void playeratack(float enemyAtack)
     {
-        currentHealth -= damageAmount;
+        currentHealth -= enemyAtack;
 
         if (currentHealth <= 0)
         {
@@ -26,5 +26,6 @@ public class Enemyhealth : MonoBehaviour
     {
         // Логика для смерти игрока
         Debug.Log("enemy died");
+        Destroy(gameObject);
     }
 }

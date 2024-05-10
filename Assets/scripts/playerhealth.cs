@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class playerhealth : MonoBehaviour
 {
-    public int maxHealth = 100;
-    public int currentHealth;
+    public float maxHealth = 100;
+    public float currentHealth;
 
     private void Start()
     {
         currentHealth = maxHealth;
     }
 
-    public void TakeDamage(int damageAmount)
+    public void TakeDamage(float damageAmount)
     {
         currentHealth -= damageAmount;
 
@@ -26,6 +26,7 @@ public class playerhealth : MonoBehaviour
     {
         // Логика для смерти игрока
         Debug.Log("Player died");
+        Destroy(gameObject);
     }
 
     public void Heal(int healAmount)

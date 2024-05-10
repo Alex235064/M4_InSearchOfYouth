@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 8371378616282775421}
   - component: {fileID: 1873113545786835020}
   - component: {fileID: 8733213424262175598}
+  - component: {fileID: 7405478184984264151}
+  - component: {fileID: 4308908132522783569}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -155,6 +157,38 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &7405478184984264151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584389210748492166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840d23c0e20d326458e4948ff786b948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+--- !u!114 &4308908132522783569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584389210748492166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af63f80ea5438444aa1e037649728935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 1
+  enemyAtack: 20
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  attackPoint: {fileID: 0}
 --- !u!1 &7248377274452631571
 GameObject:
   m_ObjectHideFlags: 0

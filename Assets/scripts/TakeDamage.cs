@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class TakeDamage : MonoBehaviour
 {
-    public int damageAmount = 10;
+    public float damageAmount = 10;
     public string playerTag = "Player";
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag(playerTag))
         {
+            Debug.Log("123");
+                
             playerhealth playerHealth = collision.gameObject.GetComponent<playerhealth>();
             if (playerHealth != null)
             {
                 Debug.Log("take");
-                playerHealth.TakeDamage(damageAmount);
+                playerHealth.TakeDamage(damageAmount * Time.deltaTime);
             }
         }
     }

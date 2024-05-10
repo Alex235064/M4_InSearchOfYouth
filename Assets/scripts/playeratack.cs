@@ -5,21 +5,28 @@ using UnityEngine;
 public class playeratack : MonoBehaviour
 {
     public float attackRange = 1f;
+    public float enemyAtack = 20;
     public LayerMask enemyLayer;
-    public Transform attackPoint; // Point where the player will attack
+    public Transform attackPoint;
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
 
             foreach (Collider2D enemy in hitEnemies)
             {
-                
+                Debug.Log("sdas");
+                Enemyhealth enemyhealth = enemy.GetComponent<Enemyhealth>();
+                if (enemyhealth != null)
+                {
+                    Debug.Log("tdsfsd");
+                    enemyhealth.playeratack(enemyAtack);
+                }
             }
-        }
+        } 
     }
 
     private void OnDrawGizmosSelected()
