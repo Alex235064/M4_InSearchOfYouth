@@ -13,17 +13,19 @@ public class playeratack : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            
-            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
-
-            foreach (Collider2D enemy in hitEnemies)
+            if(attackPoint != null)
             {
-                Debug.Log("sdas");
-                Enemyhealth enemyhealth = enemy.GetComponent<Enemyhealth>();
-                if (enemyhealth != null)
+                Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
+
+                foreach (Collider2D enemy in hitEnemies)
                 {
-                    Debug.Log("tdsfsd");
-                    enemyhealth.playeratack(enemyAtack);
+                    Debug.Log("sdas");
+                    Enemyhealth enemyhealth = enemy.GetComponent<Enemyhealth>();
+                    if (enemyhealth != null)
+                    {
+                        Debug.Log("tdsfsd");
+                        enemyhealth.playeratack(enemyAtack);
+                    }
                 }
             }
         } 

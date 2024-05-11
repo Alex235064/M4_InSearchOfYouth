@@ -198,6 +198,12 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4308908132522783569, guid: 05dcd276f486b92468c09e9fcaa167fc,
+        type: 3}
+      propertyPath: attackPoint
+      value: 
+      objectReference: {fileID: 7507069021609895987, guid: c57ce38bfe926ec4797ec55864dd5709,
+        type: 3}
     - target: {fileID: 7290637164934405736, guid: 05dcd276f486b92468c09e9fcaa167fc,
         type: 3}
       propertyPath: m_Name
@@ -365,7 +371,7 @@ PrefabInstance:
     - target: {fileID: 7507069021609896013, guid: c57ce38bfe926ec4797ec55864dd5709,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7507069021609896015, guid: c57ce38bfe926ec4797ec55864dd5709,
         type: 3}

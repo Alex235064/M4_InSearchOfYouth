@@ -100,7 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a9593a283db2c94fbca5e432fff9d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  speed: 5
+  animator: {fileID: 1873113545786835020}
 --- !u!70 &8371378616282775421
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -188,7 +189,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 4294967295
-  attackPoint: {fileID: 0}
+  attackPoint: {fileID: 3643797662270236876}
 --- !u!1 &7248377274452631571
 GameObject:
   m_ObjectHideFlags: 0
