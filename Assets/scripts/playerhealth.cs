@@ -6,6 +6,7 @@ public class playerhealth : MonoBehaviour
 {
     public float maxHealth = 100;
     public float currentHealth;
+    public RectTransform valueRectTransform;
 
     private void Start()
     {
@@ -20,6 +21,7 @@ public class playerhealth : MonoBehaviour
         {
             Die();
         }
+        valueRectTransform.anchorMax = new Vector2(currentHealth / maxHealth, 1);
     }
 
     void Die()

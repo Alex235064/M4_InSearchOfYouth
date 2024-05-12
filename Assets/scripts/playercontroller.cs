@@ -6,6 +6,7 @@ public class playercontroller : MonoBehaviour
 {
     public float speed;
     public Animator animator;
+    public AudioSource sounds;
     private Vector2 direction;
     private Rigidbody2D rb;
 
@@ -22,6 +23,8 @@ public class playercontroller : MonoBehaviour
         animator.SetFloat("Vertical", direction.y);
         animator.SetFloat("Horizontal", direction.x);
         animator.SetFloat("Speed", direction.sqrMagnitude);
+
+        sounds.Play();
     }
 
     void FixedUpdate()
