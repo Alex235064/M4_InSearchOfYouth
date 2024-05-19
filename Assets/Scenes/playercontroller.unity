@@ -283,6 +283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 100
+  valueRectTransform: {fileID: 0}
 --- !u!114 &1928217685
 MonoBehaviour:
   m_ObjectHideFlags: 0

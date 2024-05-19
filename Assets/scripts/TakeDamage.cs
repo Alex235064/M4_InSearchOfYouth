@@ -9,13 +9,10 @@ public class TakeDamage : MonoBehaviour
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag(playerTag))
-        {
-            Debug.Log("123");
-                
+        { 
             playerhealth playerHealth = collision.gameObject.GetComponent<playerhealth>();
             if (playerHealth != null)
             {
-                Debug.Log("take");
                 playerHealth.TakeDamage(damageAmount * Time.deltaTime);
             }
         }
