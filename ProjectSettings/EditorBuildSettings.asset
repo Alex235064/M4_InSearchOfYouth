@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/alexkalamismap1.unity
     guid: aa2342733a1da4c47bd3dfa4a97bd26d
+  - enabled: 1
+    path: Assets/Scenes/dangenMap.unity
+    guid: 3c1b8291b78adce4d92f4859b5d00364
   m_configObjects: {}
