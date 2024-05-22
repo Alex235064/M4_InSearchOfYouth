@@ -8,9 +8,7 @@ public class playeratack : MonoBehaviour
     public float enemyAtack = 20;
     public LayerMask enemyLayer;
     public Transform attackPoint;
-    public Animator animator;
-
-    private Vector2 direction;
+ 
 
     void Update()
     {
@@ -29,17 +27,11 @@ public class playeratack : MonoBehaviour
                         Debug.Log("tdsfsd");
                         enemyhealth.playeratack(enemyAtack);
                     }
-                    animator.SetFloat("atack", 1);
-                    animator.SetFloat("atack", 0);
+                   
                 }
                
             }
         }
-        direction.x = Input.GetAxisRaw("Horizontal");
-        direction.y = Input.GetAxisRaw("Vertical");
-
-        animator.SetFloat("Vertical", direction.y);
-        animator.SetFloat("Horizontal", direction.x);
         
     }
 

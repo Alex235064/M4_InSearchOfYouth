@@ -6,6 +6,7 @@ public class Enemyhealth : MonoBehaviour
 {
     public float maxHealth = 50;
     public float currentHealth;
+    public float boss = 0;
 
     private void Start()
     {
@@ -27,5 +28,11 @@ public class Enemyhealth : MonoBehaviour
         // Логика для смерти игрока
         Debug.Log("enemy died");
         Destroy(gameObject);
+        spavner spavner = GetComponent<spavner>();
+        if (spavner != null)
+        {
+            spavner.SpawnObjectOnDeath(boss);
+        }
+
     }
 }
