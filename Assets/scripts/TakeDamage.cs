@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TakeDamage : MonoBehaviour
 {
-    public float damageAmount = 10;
+    public float damage = 10;
     public string playerTag = "Player";
     private void OnCollisionStay2D(Collision2D collision)
     {
@@ -13,7 +13,7 @@ public class TakeDamage : MonoBehaviour
             playerhealth playerHealth = collision.gameObject.GetComponent<playerhealth>();
             if (playerHealth != null)
             {
-                playerHealth.TakeDamage(damageAmount * Time.deltaTime);
+                playerHealth.TakeDamage(damage * Time.deltaTime);
             }
         }
     }

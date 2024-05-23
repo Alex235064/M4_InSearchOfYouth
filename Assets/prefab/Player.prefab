@@ -101,9 +101,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a9593a283db2c94fbca5e432fff9d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 25
   animator: {fileID: 1873113545786835020}
   sounds: {fileID: 3781146281626608109}
+  bombPrefab: {fileID: 6113273427698089669, guid: c0e1f87365d311d45959b8ce5fdc6709,
+    type: 3}
 --- !u!70 &8371378616282775421
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -188,12 +190,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRange: 1
-  enemyAtack: 20
+  damage: 20
   enemyLayer:
     serializedVersion: 2
     m_Bits: 4294967295
   attackPoint: {fileID: 3643797662270236876}
-  animator: {fileID: 0}
 --- !u!1 &3701436869997419114
 GameObject:
   m_ObjectHideFlags: 0

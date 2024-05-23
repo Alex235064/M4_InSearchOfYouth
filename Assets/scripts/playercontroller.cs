@@ -7,6 +7,8 @@ public class playercontroller : MonoBehaviour
     public float speed;
     public Animator animator;
     public AudioSource sounds;
+    public GameObject bombPrefab;
+
     private Vector2 direction;
     private Rigidbody2D rb;
 
@@ -25,10 +27,19 @@ public class playercontroller : MonoBehaviour
         animator.SetFloat("Speed", direction.sqrMagnitude);
 
         sounds.Play();
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            DropBomb();
+        }
     }
 
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + direction * speed * Time.deltaTime); 
+    }
+    void DropBomb()
+    {
+
+        Instantiate(bombPrefab, transform.position, transform.rotation);
     }
 }

@@ -26,8 +26,18 @@ public class Bomb : MonoBehaviour
         {
             
             if (hit.CompareTag("Player") || hit.CompareTag("Enemy"))
-            { 
-                // Здесь должен быть ваш код для нанесения урона
+            {
+                playerhealth playerHealth = hit.GetComponent<playerhealth>();
+                if (playerHealth != null)
+                {
+                    playerHealth.TakeDamage(damage * Time.deltaTime);
+                }
+                Enemyhealth enemyhealth = hit.GetComponent<Enemyhealth>();
+                if (enemyhealth != null)
+                {
+                    Debug.Log("tdsfsd");
+                    enemyhealth.playeratack(damage);
+                }
             }
         }
 
@@ -36,23 +46,3 @@ public class Bomb : MonoBehaviour
     }
 }
 
-public class PlayerController : MonoBehaviour
-{
-    public GameObject bombPrefab; 
-
- 
-    void Update()
-    {
-       
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            DropBomb();
-        }
-    }
-
-    void DropBomb()
-    {
-        
-        Instantiate(bombPrefab, transform.position, transform.rotation);
-    }
-}

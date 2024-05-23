@@ -5,7 +5,7 @@ using UnityEngine;
 public class playeratack : MonoBehaviour
 {
     public float attackRange = 1f;
-    public float enemyAtack = 20;
+    public float damage = 20;
     public LayerMask enemyLayer;
     public Transform attackPoint;
  
@@ -25,7 +25,7 @@ public class playeratack : MonoBehaviour
                     if (enemyhealth != null)
                     {
                         Debug.Log("tdsfsd");
-                        enemyhealth.playeratack(enemyAtack);
+                        enemyhealth.playeratack(damage);
                     }
                    
                 }

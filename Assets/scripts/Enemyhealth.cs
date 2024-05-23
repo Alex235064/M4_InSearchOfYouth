@@ -13,9 +13,9 @@ public class Enemyhealth : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    public void playeratack(float enemyAtack)
+    public void playeratack(float damage)
     {
-        currentHealth -= enemyAtack;
+        currentHealth -= damage;
 
         if (currentHealth <= 0)
         {

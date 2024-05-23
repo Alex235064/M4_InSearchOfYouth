@@ -5,6 +5,7 @@ using UnityEngine;
 public class diolog : MonoBehaviour
 {
     public GameObject interfaceElement;
+    public string playerTag = "Player";
 
     private bool isInRange = false;
 
@@ -38,4 +39,5 @@ public class diolog : MonoBehaviour
             }
         }
     }
+
 }
