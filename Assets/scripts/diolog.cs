@@ -5,6 +5,8 @@ using UnityEngine;
 public class diolog : MonoBehaviour
 {
     public GameObject interfaceElement;
+    public GameObject text;
+    public GameObject E;
     public string playerTag = "Player";
 
     private bool isInRange = false;
@@ -16,27 +18,31 @@ public class diolog : MonoBehaviour
             if (interfaceElement != null)
             {
                 interfaceElement.SetActive(true);
+                text.SetActive(true);
             }
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag(playerTag))
         {
             isInRange = true;
         }
+        E.SetActive(true);
     }
 
-    void OnTriggerExit(Collider other)
+    void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag(playerTag))
         {
             isInRange = false;
             if (interfaceElement != null)
             {
                 interfaceElement.SetActive(false);
+                text.SetActive(false);
             }
+            E.SetActive(false);
         }
     }
 
