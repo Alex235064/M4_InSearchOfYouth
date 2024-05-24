@@ -119,8 +119,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0050341976, y: -0.071061485}
-  m_Size: {x: 0.22337477, y: 0.3943426}
+  m_Offset: {x: 0.0012849917, y: -0.041966826}
+  m_Size: {x: 0.1258951, y: 0.23286341}
   m_Direction: 0
 --- !u!95 &1873113545786835020
 Animator:
@@ -236,11 +236,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: adb7fbe158a0f524d97438d07b87df4d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
